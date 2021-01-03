@@ -1,0 +1,40 @@
+[
+    {
+        "Project Name": "Account Center",
+        "Project Description": "A web-based application allowing customers to manage accounts, get information and perform other tasks related to NYPA services and products.",
+        "Start Date": 44180,
+        "End Date": 45107,
+        "Project Status": "Project-In-progress",
+        "Milestones": [
+            {
+                "Due Date": 44184,
+                "Milestones": "Release to RNY Customers",
+                "Milestone Status": "Completed"
+            },
+            {
+                "Due Date": 44184,
+                "Milestones": "Release to WNY Customers",
+                "Milestone Status": "Completed"
+            }
+        ]
+    },
+    {
+        "Project Name": "NYEM",
+        "Project Description": "A web-based application allowing customers to manage accounts, get information and perform other tasks related to NYPA services and products.",
+        "Start Date": 44180,
+        "End Date": 45107,
+        "Project Status": "Project-In-progress",
+        "Milestones": [
+            {
+                "Due Date": 44184,
+                "Milestones": "Release to RNY Customers",
+                "Milestone Status": "Completed"
+            },
+            {
+                "Due Date": 44184,
+                "Milestones": "Release to WNY Customers",
+                "Milestone Status": "Completed"
+            }
+        ]
+    }
+]

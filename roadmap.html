@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Roadmap Tool</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.2/xlsx.full.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>
+        a {
+            color: black;
+            text-decoration: underline;
+        }
+
+        .boxed {
+            border: 2px solid black;
+            box-sizing: border-box;
+            /* padding: 50px;
+            margin: 20px; */
+            height: fit-content;
+            width: fit-content;
+            justify-content: center;
+            align-items: center;
+            /* float: right; */
+            flex-grow: 1;
+        }
+
+        .help-box {
+            padding: 2px;
+        }
+
+        h6 {
+            margin-top: 2px;
+        }
+
+        .navbar-nav .nav-link {
+            font-size: small;
+        }
+
+        /* .leftdiv 
+         { 
+         float: left; 
+         padding: 1%;
+         width: 20%;
+         } 
+         .rightdiv 
+         { 
+         float: left; 
+         width: 80%;
+         }  */
+
+        /* .content {
+    float:right;
+    text-align:justify;
+    font-family:'Istok Web', Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    display:none;
+}
+
+.toggle {
+    float:right;
+    cursor: pointer;
+} */
+
+        /* .collapse { 
+        background-color: #a2de96; 
+        border: none; 
+        outline: none; 
+        font-size: 25px; 
+    } 
+   
+    .active, 
+    .collapse:hover { 
+        background-color: #438a5e; 
+    } 
+   
+    .text { 
+        background-color: #e1ffc2; 
+        display: none; 
+        font-size: 20px; 
+    }  */
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark" style="height: 40px;">
+        <!-- <a class="navbar-brand" href="#"> -->
+        <!-- <img src="BentoMenuIcon.png" style="width:25px;"> -->
+        <a class="nav-link" href="#" style="color: white;"><i class="fa fa-bars"></i></a>
+        <!-- </a> -->
+
+        <!-- Brand/logo -->
+        <a class="navbar-brand" href="#">
+            <img src="NYPA.jpg" alt="logo" style="width:70px; height: 35px;">
+        </a>
+
+        <a class="navbar-brand" href="#" style="text-decoration: none;">Sharepoint</a>
+
+        <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link" href="#" style="color: white;"><i class="fa fa-cog"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" style="color: white;"><i class="fa fa-question"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" style="color: white; text-decoration: none;">Paroha, Divya <i
+                        class="fa fa-user"></i></a>
+            </li>
+        </ul>
+    </nav>
+
+    <nav class="navbar navbar-expand-sm bg-light" style="height: 40px;">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#" style="text-decoration: none;">Browse</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" style="text-decoration: none;">Page</a>
+            </li>
+        </ul>
+
+        <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link" href="#" style="text-decoration: none;"><i class="fa fa-share-alt"></i>&nbsp;
+                    Share</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" style="text-decoration: none;"><i class="fa fa-star-o"></i>&nbsp;
+                    Follow</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" style="text-decoration: none;"><i class="fa fa-pencil"></i>&nbsp; Edit</a>
+            </li>
+        </ul>
+    </nav>
+
+    <nav class="navbar navbar-expand-md navbar-light bg-faded">
+        <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#" style="text-decoration: none;">CDEx</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" style="text-decoration: none;">Working in Agile</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" style="text-decoration: none;">CDEx Document Repository (Customer
+                    Portal)</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" style="text-decoration: none;">CDEx Background Documents</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" style="text-decoration: none;">CDEx Refresh Doc Library</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" style="text-decoration: none;"><i class="fa fa-pencil"></i> Edit Links</a>
+            </li>
+        </ul>
+        <form class="w-20">
+            <div class="input-group">
+                <input type="text" class="form-control border border-right-0" placeholder="Search this site">
+                <span class="input-group-append">
+                    <button class="btn btn-outline-secondary border border-left-0" type="button">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"></a>
+                        <!-- <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">Action</a>
+                            <a href="#" class="dropdown-item">Another action</a>
+                        </div> -->
+                        <i class="fa fa-search"></i>
+                    </button>
+                </span>
+            </div>
+        </form>
+    </nav>
+
+    <div class="col-md-6" style="margin-left: 16%;">
+        <h3>CDEx</h3>
+    </div>
+
+
+    <div class="container-fluid mt-2">
+        <div class="row">
+            <div class="col-sm-4">
+                <a href="#">Download</a> &nbsp;
+                <a href="#"><i class="fa fa-print fa-fw"></i> Print</a>
+            </div>
+            <div class="col-sm-8" style="display: flex;">
+                <div>
+                    Legend
+                </div> &nbsp;
+                <div class="boxed">
+                    <i class="fa fa-square help-box" style="color: blue;">&nbsp;Project Progress</i>
+                    <i class="fa fa-circle help-box" style="color: black;">&nbsp;Completed Milestone</i>
+                    <i class="fa fa-circle help-box" style="color: gray;">&nbsp;Future Milestone</i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="conatiner mt-2" id="hideDIV">
+        <div class="row">
+            <div class="col-md-3">
+                <input class="form-control" type="file" id="input" accept=".xls,.xlsx,.csv">
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-primary" id="button" onclick="myFunction()">Convert</button>
+            </div>
+        </div>
+    </div>
+    <!-- Expand Collapse first example to check the responsive behavior in MHTML file -->
+    <!-- <p>Expand Collapse first example to check the responsive behavior in MHTML file</p>
+    <div class="container">
+        <p data-toggle="collapse" data-target="#demo2">
+            Click here to see expansion.
+        </p>
+        <div id="demo2" class="collapse">
+            Project Description to appear on expanding.
+        </div>
+    </div> -->
+
+    <!-- <hr> -->
+    <!-- Expand Collapse second example to check the responsive behavior in MHTML file -->
+    <!-- <p>Expand Collapse second example to check the responsive behavior in MHTML file</p>
+    <div id="accordion">
+        <div class="card">
+            <div class="card-header">
+                <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+                    Click here to see expansion.
+                </a>
+            </div>
+            <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                <div class="card-body">
+                    Project Description to appear on expanding.
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- <br> -->
+
+    <svg width='100%' height='65px' viewBox='-25 -15 1132 65'>
+        <g class='bars'>
+            <rect rx="10" ry="20" width="100%" height="30" style="fill:gray;stroke:black;opacity:0.5" />
+            <rect rx="10" ry="20" width="50%" height="30" style="stroke:black;opacity:0.5" />
+            <circle cx="50" cy="15" r="15" stroke="black" fill="black" />
+            <circle cx="150" cy="15" r="15" stroke="black" fill="white" />
+        </g>
+
+        <g class='markers'>
+            <rect fill='red' x='0%' y='0' width='2' height='30'></rect>
+            <rect fill='red' x='25%' y='0' width='2' height='30'></rect>
+            <rect fill='red' x='50%' y='0' width='2' height='30'></rect>
+            <rect fill='red' x='75%' y='0' width='2' height='30'></rect>
+        </g>
+
+    </svg>
+
+    <div class="col-md-3">
+        <h6 id="header"></h6>
+        <p id="demo"></p>
+    </div>
+
+</body>
+
+<script src="excelJSON.js"></script>
+
+</html>
